@@ -8,6 +8,10 @@ const {
     deleteLead,
     addLog
 } = require('../controllers/leadController');
+const { protect } = require('../middleware/auth');
+
+// Apply auth middleware to all routes
+router.use(protect);
 
 router.get('/', getAllLeads);
 router.get('/:id', getLeadById);

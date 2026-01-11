@@ -20,6 +20,11 @@ const logSchema = new mongoose.Schema({
 });
 
 const leadSchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
     business: {
         type: String,
         required: [true, 'Business name is required'],
