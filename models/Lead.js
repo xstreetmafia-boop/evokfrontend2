@@ -78,6 +78,18 @@ const leadSchema = new mongoose.Schema({
             'Kasaragod'
         ]
     },
+    meetingDate: {
+        type: Date,
+        default: null
+    },
+    reminderDate: {
+        type: Date,
+        default: null
+    },
+    reminderNote: {
+        type: String,
+        default: ''
+    },
     logs: [logSchema]
 }, {
     timestamps: true
